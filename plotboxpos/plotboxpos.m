@@ -126,7 +126,13 @@ end
 
 % Convert plot box position to the units used by the axis
 
-temp = axes('Units', 'Pixels', 'Position', pos, 'Visible', 'off', 'parent', get(h, 'parent'));
+hparent = get(h, 'parent');
+hfig = ancestor(hparent, 'figure'); % in case in panel or similar
+currax = get(hfig, 'currentaxes');
+
+temp = axes('Units', 'Pixels', 'Position', pos, 'Visible', 'off', 'parent', hparent);
 set(temp, 'Units', currunit);
 pos = get(temp, 'position');
 delete(temp);
+
+set(hfig, 'currentaxes', currax);
