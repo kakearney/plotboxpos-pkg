@@ -54,6 +54,7 @@ else
     
     if any(isinf([xlim ylim]))
         hc = get(h, 'Children');
+        hc(~arrayfun( @(h) isprop(h, 'XData' ) & isprop(h, 'YData' ), hc)) = [];
         xdata = get(hc, 'XData');
         if iscell(xdata)
             xdata = cellfun(@(x) x(:), xdata, 'uni', 0);
