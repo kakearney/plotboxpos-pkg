@@ -32,9 +32,7 @@ end
 % Get position of axis in pixels
 
 currunit = get(h, 'units');
-set(h, 'units', 'pixels');
-axisPos = get(h, 'Position');
-set(h, 'Units', currunit);
+axisPos  = getpixelposition(h);
 
 % Calculate box position based axis limits and aspect ratios
 
