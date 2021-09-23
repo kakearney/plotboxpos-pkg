@@ -3,6 +3,7 @@
 
 
 Author: Kelly Kearney
+[![View plotboxpos on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/9615-plotboxpos)
 
 
 This repository includes the code for the `plotboxpos.m` Matlab function.
